@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fees Table Modal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <!-- Fees Button -->
+  <button onclick="openModal()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+    Show Fees Structure
+  </button>
+
+  <!-- Modal -->
+  <div id="feesModal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-xl shadow-xl max-w-2xl w-full overflow-auto">
+      <h2 class="text-2xl font-bold mb-4 text-center">Fees Structure</h2>
+      <table class="w-full table-auto border border-gray-300">
+        <thead>
+          <tr class="bg-gray-200 text-left">
+            <th class="border border-gray-300 px-4 py-2">Class</th>
+            <th class="border border-gray-300 px-4 py-2">Fees (INR)</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr><td class="border px-4 py-2">Pre-Nursery</td><td class="border px-4 py-2">₹350</td></tr>
+          <tr><td class="border px-4 py-2">Nursery</td><td class="border px-4 py-2">₹400</td></tr>
+          <tr><td class="border px-4 py-2">LKG</td><td class="border px-4 py-2">₹450</td></tr>
+          <tr><td class="border px-4 py-2">UKG</td><td class="border px-4 py-2">₹500</td></tr>
+          <tr><td class="border px-4 py-2">Class 1</td><td class="border px-4 py-2">₹550</td></tr>
+          <tr><td class="border px-4 py-2">Class 2</td><td class="border px-4 py-2">₹600</td></tr>
+          <tr><td class="border px-4 py-2">Class 3</td><td class="border px-4 py-2">₹650</td></tr>
+          <tr><td class="border px-4 py-2">Class 4</td><td class="border px-4 py-2">₹700</td></tr>
+          <tr><td class="border px-4 py-2">Class 5</td><td class="border px-4 py-2">₹750</td></tr>
+          <tr><td class="border px-4 py-2">Class 6</td><td class="border px-4 py-2">₹800</td></tr>
+          <tr><td class="border px-4 py-2">Class 7</td><td class="border px-4 py-2">₹850</td></tr>
+          <tr><td class="border px-4 py-2">Class 8</td><td class="border px-4 py-2">₹900</td></tr>
+        </tbody>
+      </table>
+      <div class="text-center mt-6">
+        <button onclick="closeModal()" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function openModal() {
+      document.getElementById("feesModal").classList.remove("hidden");
+    }
+
+    function closeModal() {
+      document.getElementById("feesModal").classList.add("hidden");
+    }
+  </script>
+
+</body>
+</html>

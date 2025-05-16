@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our School - About Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fade animation */
+    .fade {
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Hero Banner -->
+  <div class="relative w-full h-80 md:h-[500px] overflow-hidden">
+    <img id="bannerImage" src="school1.jpg" alt="School Banner" class="w-full h-full object-cover fade absolute inset-0">
+  </div>
+
+  <!-- About Section -->
+  <section class="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl p-10 mt-10">
+    <h2 class="text-4xl font-bold mb-6 text-blue-700 text-center">About Our School</h2>
+    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+      Welcome to our school — a place where passion meets purpose, and where education becomes a powerful tool for change. Our school is dedicated to educating rural children and building a foundation of lifelong learning, character, and values. We strive to bring quality education to villages where access is often limited, giving every child the opportunity to grow, thrive, and succeed.
+    </p>
+    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+      From Pre-Nursery to Class 8, we focus on a holistic approach that nurtures both academic and personal development. Our curriculum is aligned with modern learning methodologies while also being sensitive to local cultural needs. With a dedicated team of trained educators, we foster an environment where students feel safe, supported, and encouraged to express themselves.
+    </p>
+    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+      The heart of our mission is to uplift rural communities through education. We believe no child should be left behind due to geographic or economic barriers. That’s why we engage with families, host community workshops, and provide affordable education plans so every child has a chance to dream big.
+    </p>
+    <p class="text-gray-700 text-lg leading-relaxed">
+      We are more than a school — we are a movement. A movement to break the cycle of poverty, to raise awareness, and to create responsible citizens of tomorrow. Every classroom is a spark, every lesson is a step forward, and every child we teach is a story of hope. Join us in this mission to educate, empower, and enlighten rural India — one student at a time.
+    </p>
+  </section>
+
+  <!-- JavaScript for Banner Slideshow -->
+  <script>
+    const bannerImages = ["banner1.jpg", "banner2.jpg", "banner3.jpg"]; // Replace with your images
+    let current = 0;
+    const banner = document.getElementById("bannerImage");
+
+    setInterval(() => {
+      banner.style.opacity = 0;
+      setTimeout(() => {
+        current = (current + 1) % bannerImages.length;
+        banner.src = bannerImages[current];
+        banner.style.opacity = 1;
+      }, 1000);
+    }, 4000); // every 4 seconds
+  </script>
+
+</body>
+</html>
